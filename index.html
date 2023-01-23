@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body id="body">
+<script>
+    var newouter = document.createElement('div')
+    newouter.className = "header"
+    newouter.id = "outer"
+    // document.getElementById("body").appendChild(newouter)
+    for (let j = 0; j < 10; j++ ) {
+        var newinner = document.createElement('div')
+        newinner.className = "pixel"
+        newouter.appendChild(newinner)
+        // document.getElementById("outer").appendChild(newinner)
+    }
+    for (let k = 0; k < 10; k++ ) {
+        cloned = newouter.cloneNode("deep")
+        document.getElementById("body").appendChild(cloned)
+        console.log(k)
+    }
+    // document.getElementById("body").appendChild(newouter)
+
+</script>
+<div class="header">
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+</div>
+    
+</body>
+</html>
