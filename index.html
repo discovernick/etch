@@ -9,18 +9,28 @@
     <script src="script.js" defer></script>
 </head>
 <body id="body">
+<div class="nav">
+    <div class="reset"> <button class="btn1" onclick="stripColour()"> Reset Grid! </button></div>
+    <div class="reset"> <button class="btn1" onclick="stripColour()"> Classic Black! </button></div>
+    <div class="reset"> <button class="btn1" onclick="stripColour()"> Darkify! </button></div>
+    <div class="reset"> <button class="btn1" onclick="stripColour()"> Colourfy! </button></div>
+</div>
 <script>
+    // Get current viewport width and assign variables
+    let hgt = Math.floor(document.documentElement.clientHeight / 50); 
+    let wdt = Math.floor((document.documentElement.clientWidth - 100) / 50); 
+    // 
     var newouter = document.createElement('div')
     newouter.className = "header"
     newouter.id = "outer"
     // document.getElementById("body").appendChild(newouter)
-    for (let j = 0; j < 10; j++ ) {
+    for (let j = 0; j < wdt; j++ ) {
         var newinner = document.createElement('div')
         newinner.className = "pixel"
         newouter.appendChild(newinner)
         // document.getElementById("outer").appendChild(newinner)
     }
-    for (let k = 0; k < 10; k++ ) {
+    for (let k = 0; k < hgt; k++ ) {
         cloned = newouter.cloneNode("deep")
         document.getElementById("body").appendChild(cloned)
         console.log(k)
@@ -28,18 +38,5 @@
     // document.getElementById("body").appendChild(newouter)
 
 </script>
-<div class="header">
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
-</div>
-    
 </body>
 </html>

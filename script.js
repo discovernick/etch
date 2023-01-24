@@ -1,6 +1,9 @@
 // Function to be able to 
-function hoverall() {
-
+function stripColour() {
+    var pixels = document.querySelectorAll("div.pixel");
+    pixels.forEach((pixel) => {
+        pixel.style.backgroundColor = 'white';
+    });
     return;
 }
 
